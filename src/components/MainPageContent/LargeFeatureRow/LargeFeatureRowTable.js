@@ -76,7 +76,7 @@ class LargeFeatureRowTable extends Component {
 
   render() {
     return (
-      <Col xs={12} sm={12} md={12} lg={6} xl={6}>
+      <Col xs={12} sm={12} md={12} lg={6} xl={6} className="mb-5">
         <StyledTableWrapper
           className={
             this.state.isOpen ? "styledTable" : "styledTable collapsed"

@@ -2,6 +2,7 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 
 import LargeFeatureRowTable from "./LargeFeatureRowTable";
+import LargeFeatureChart from "./LargeFeatureChart";
 
 const DATA = [
   {
@@ -30,6 +31,7 @@ const LargeFeatureRow = props => {
   return (
     <Row>
       <LargeFeatureRowTable tableTitle="Basal Metabolism" tableData={DATA} />
+      <LargeFeatureChart chartTitle="Caffeine sensitivity" />
     </Row>
   );
 };

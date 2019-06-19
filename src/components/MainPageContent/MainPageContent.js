@@ -10,7 +10,7 @@ const PageContentWrapper = styled(Container)`
   background: #f9f8f2;
   border-radius: 20px;
   margin: 0 15px 0 0;
-  padding: 40px 25px;
+  padding: 40px 25px 100px 25px;
   min-height: 80vh;
 `;
 
