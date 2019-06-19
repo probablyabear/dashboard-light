@@ -34,7 +34,6 @@ class SideNavWrapper extends Component {
   }
 
   toggleSideBar = event => {
-    console.log("collapse clicked");
     this.setState({
       isOpen: !this.state.isOpen
     });
