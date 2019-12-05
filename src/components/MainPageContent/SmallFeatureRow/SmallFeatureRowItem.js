@@ -27,6 +27,7 @@ const iconColors = {
 
 const RowItem = styled.div`
   background: #ffffff;
+  height: 80%;
   margin-bottom: 35px;
   border-radius: 8px;
   padding: 30px 25px;
@@ -35,6 +36,7 @@ const RowItem = styled.div`
     0 15px 40px rgba(166, 173, 201, 0.3);
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
   border-bottom: solid 3px transparent;
 
@@ -44,8 +46,10 @@ const RowItem = styled.div`
 `;
 
 const RowItemIcon = styled.div`
+  flex-shrink: 0;
   width: 60px;
   height: 60px;
+  margin-right: 20px;
   background: ${props =>
     props.green
       ? iconColors.green.light
@@ -77,7 +81,6 @@ const RowItemIcon = styled.div`
 
 const RowItemTextContent = styled.div`
   color: #45494a;
-  margin-left: 20px;
 
   .statTitle {
     margin-bottom: 0;

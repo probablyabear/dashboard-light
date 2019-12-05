@@ -19,7 +19,7 @@ const SideNavSectionTitle = props => {
     <SideNavSectionTitleText>
       {props.titleText}
       <i
-        className="fas fa-caret-left collapse-icon"
+        className="fas fa-caret-left fa-2x collapse-icon"
         onClick={props.toggleSideBar}
       />
     </SideNavSectionTitleText>

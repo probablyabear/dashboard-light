@@ -1,5 +1,10 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
+import styled from "styled-components";
+
+const StyledSpan = styled.span`
+  color: #272f2f;
+`;
 
 const NavBarUser = () => {
   return (
@@ -13,7 +18,7 @@ const NavBarUser = () => {
           border: "solid 1px #bdbdbd"
         }}
       />
-      <span>User Name</span>
+      <StyledSpan>Jim Lahey</StyledSpan>
     </span>
   );
 };

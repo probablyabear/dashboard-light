@@ -6,7 +6,6 @@ import styled from "styled-components";
 
 const SearchInputGroup = styled(InputGroup)`
   width: 300px;
-  margin-left: 150px;
 `;
 
 const SearchInput = styled(FormControl)`

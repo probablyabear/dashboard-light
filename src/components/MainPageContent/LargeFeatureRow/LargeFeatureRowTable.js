@@ -87,7 +87,7 @@ class LargeFeatureRowTable extends Component {
             <span className="tableAction" onClick={this.toggleTable}>
               {this.state.isOpen ? (
                 <span>
-                  Close <i className="fas fa-chevron-down" />
+                  Close <i className="fas fa-chevron-up" />
                 </span>
               ) : (
                 <span>

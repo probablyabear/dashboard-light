@@ -27,18 +27,11 @@ const StyledChartWrapper = styled.div`
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(166, 173, 201, 0.3);
   color: #45494a;
-  display: flex;
-  flex-direction: column;
   transition: all 0.2s;
-  height: 100%;
-  overflow-y: hidden;
   padding: 15px 20px;
 `;
 
 const StyledChartTitle = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 5px;
 
   p {
@@ -55,6 +48,38 @@ const colors = [
   "#92ddf6"
 ];
 
+class CustomizedAxisTick extends Component {
+  render() {
+    const { x, y, payload } = this.props;
+
+    return (
+      <g transform={`translate(${x},${y})`}>
+        <text
+          x={0}
+          y={0}
+          dy={3}
+          textAnchor="end"
+          fill="#666"
+          transform="rotate(-90)"
+          fontSize="11"
+        >
+          {payload.value}
+        </text>
+      </g>
+      // <Text
+      //   x={x}
+      //   y={y}
+      //   textAnchor="middle"
+      //   verticalAnchor="start"
+      //   fontSize="11"
+      //   fill="#666"
+      // >
+      //   {payload.value}
+      // </Text>
+    );
+  }
+}
+
 class LargeFeatureChart extends Component {
   render() {
     return (
@@ -63,14 +88,16 @@ class LargeFeatureChart extends Component {
           <StyledChartTitle>
             <p>{this.props.chartTitle}</p>
           </StyledChartTitle>
-          <ResponsiveContainer>
+          <ResponsiveContainer height={250}>
             <BarChart data={data}>
               <XAxis
                 dataKey="name"
-                padding={{ left: 10 }}
                 tickLine={false}
                 axisLine={false}
                 fontSize={11}
+                interval={0}
+                height={55}
+                tick={<CustomizedAxisTick />}
               />
               <YAxis
                 axisLine={false}
