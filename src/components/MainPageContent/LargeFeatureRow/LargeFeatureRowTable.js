@@ -51,6 +51,7 @@ const StyledTableRow = styled.div`
 `;
 
 const StyledTableCell = styled.div`
+  font-size: 0.9em;
   i {
     margin-left: 9px;
   }

@@ -1,43 +1,45 @@
 import React, { Component } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Container } from "react-bootstrap";
+import styled from "styled-components";
 
 import NavSearch from "./NavSearch";
 import NavBarUser from "./NavBarUser";
+
+const NavToggle = styled(Navbar.Toggle)`
+  border: none;
+`;
+
+const CollapseContentWrapper = styled.div`
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1rem;
+
+  p {
+    margin-bottom: 0;
+  }
+`;
 
 export default class NavBar extends Component {
   render() {
     return (
       <Container fluid>
         <Navbar
-          expand="lg"
+          expand="true"
           style={{ padding: ".5rem", marginBottom: "1.5rem" }}
         >
           <Navbar.Brand href="#home">React Dashboard</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              {/* <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link> */}
-            </Nav>
-            <NavSearch />
+          <NavToggle aria-controls="basic-navbar-nav">
             <NavBarUser />
+          </NavToggle>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <CollapseContentWrapper>
+              <NavSearch />
+            </CollapseContentWrapper>
           </Navbar.Collapse>
         </Navbar>
-        {/* <Navbar className="mb-3">
-          <Navbar.Brand href="/" className="mr-auto">
-            Brand
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <NavSearch />
-            <Navbar.Text className="mr-auto">
-            <i className="far fa-comment" style={{ cursor: "pointer" }} />
-          </Navbar.Text>
-            <Nav.Link>
-              <NavBarUser />
-            </Nav.Link>
-          </Navbar.Collapse>
-        </Navbar> */}
       </Container>
     );
   }

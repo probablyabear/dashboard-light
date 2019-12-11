@@ -10,7 +10,6 @@ const NavBarUser = () => {
   return (
     <span>
       <Image
-        className="mr-2"
         src="https://randomuser.me/api/portraits/men/32.jpg"
         roundedCircle
         style={{
@@ -18,7 +17,7 @@ const NavBarUser = () => {
           border: "solid 1px #bdbdbd"
         }}
       />
-      <StyledSpan>Jim Lahey</StyledSpan>
+      {/* <StyledSpan>Jim Lahey</StyledSpan> */}
     </span>
   );
 };

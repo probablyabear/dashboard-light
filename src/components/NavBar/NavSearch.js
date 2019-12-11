@@ -28,9 +28,14 @@ const SearchIcon = styled(InputGroup.Text)`
   border: none;
 `;
 
+const SearchForm = styled(Form)`
+  display: flex;
+  justify-content: flex-end;
+`;
+
 const NavSearch = () => {
   return (
-    <Form>
+    <SearchForm>
       <SearchInputGroup>
         <InputGroup.Prepend>
           <SearchIcon id="basic-addon1">
@@ -42,7 +47,7 @@ const NavSearch = () => {
           aria-label="Search"
         />
       </SearchInputGroup>
-    </Form>
+    </SearchForm>
   );
 };
 
